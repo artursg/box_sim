@@ -1,8 +1,14 @@
 <launch>
-  <include file="$(find gazebo_ros)/launch/empty_world.launch" />
-  <param name="robot_description" command="$(find xacro)/xacro '$(find box_sim)/urdf/box.urdf.xacro'"/>
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model box -param robot_description -z 0.115 -x 3.0"/>
-  <include file="$(find box_control)/launch/box_control.launch">
-    <arg name="controllers" value="joint_state_controller" />
-  </include>
+    <arg name="paused" default="false"/>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="true"/>
+    <arg name="gzpose" default="-x 0.0 -y 0.0 -z 0.115"/>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+    <include file="$(find box_sim)/launch/load_description.launch"/>
+    <include file="$(find box_sim)/launch/spawn_robot.launch"/>
+    <include file="$(find box_control)/launch/control.launch">
+        <arg name="controllers" value="joint_state_controller"/>
+    </include>
 </launch>

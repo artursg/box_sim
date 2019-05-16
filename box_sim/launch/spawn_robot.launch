@@ -1,0 +1,5 @@
+<launch>
+    <arg name="gzpose" default=""/>
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false"
+     output="screen" args="-urdf -model box -param robot_description $(arg gzpose)"/>
+</launch>
