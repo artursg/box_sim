@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-<xacro:macro name="box_transmission">
-       <transmission name="box_tran_1">
+<robot
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="box_transmission">
+        <transmission name="box_tran_1">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="right_steer_joint">
                 <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
@@ -10,20 +11,7 @@
                 <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
-        </transmission> 
-
-      <!-->  <transmission name="junior_car_tran_2">
-            <robotNamespace>/junior_car</robotNamespace>
-            <type>transmission_interface/SimpleTransmission</type>
-            <joint name="right_steer_wheel_joint">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-            </joint>
-            <actuator name="junior_car_motor_2">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>-->
-
+        </transmission>
         <transmission name="box_tran_3">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="left_steer_joint">
@@ -33,20 +21,7 @@
                 <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
-        </transmission> 
-
-    <!-->    <transmission name="junior_car_tran_4">
-            <robotNamespace>/junior_car</robotNamespace>
-            <type>transmission_interface/SimpleTransmission</type>
-            <joint name="left_steer_wheel_joint">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-            </joint>
-            <actuator name="junior_car_motor_4">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission> -->
-
+        </transmission>
         <transmission name="box_tran_5">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="right_drive_wheel_joint">
@@ -57,7 +32,6 @@
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
-
         <transmission name="box_tran_6">
             <robotNamespace>/box</robotNamespace>
             <type>transmission_interface/SimpleTransmission</type>
@@ -69,7 +43,6 @@
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
-
         <transmission name="box_tran_8">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="fake_drive_joint">
@@ -80,7 +53,6 @@
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
         </transmission>
-        
         <transmission name="box_tran_9">
             <type>transmission_interface/SimpleTransmission</type>
             <joint name="fake_steer_joint">
@@ -90,33 +62,6 @@
                 <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
                 <mechanicalReduction>1</mechanicalReduction>
             </actuator>
-        </transmission> 
-
-  <!-->  <transmission name="junior_car_tran_5double">
-            <robotNamespace>/junior_car</robotNamespace>
-            <type>transmission_interface/SimpleTransmission</type>
-            <joint name="right_drive_wheel_joint">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-            </joint>
-            <actuator name="junior_car_motor_5double">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission>  -->
-
-
-   <!-->  <transmission name="junior_car_tran_6double">
-            <robotNamespace>/junior_car</robotNamespace>
-            <type>transmission_interface/SimpleTransmission</type>
-            <joint name="left_drive_wheel_joint">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-            </joint>
-            <actuator name="junior_car_motor_6double">
-                <hardwareInterface>VelocityJointInterface</hardwareInterface>
-                <mechanicalReduction>1</mechanicalReduction>
-            </actuator>
-        </transmission> -->
-
+        </transmission>
     </xacro:macro>
-
 </robot>

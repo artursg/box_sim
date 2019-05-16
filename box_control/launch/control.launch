@@ -3,8 +3,6 @@
     <rosparam file="$(find box_control)/config/ros_control.yaml" command="load" />
     <rosparam file="$(find box_control)/config/ackermann_steering_controller.yaml" command="load"/>
     <arg name="controllers" default="joint_state_controller pos_joint_trajectory_controller steer_drive_controller joint_state_controller"/>
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="$(arg controllers)" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-        <!--remap from="joint_states" to="/box/joint_states" /-->
-    </node>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="$(arg controllers)"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
 </launch>

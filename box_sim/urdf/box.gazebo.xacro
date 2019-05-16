@@ -1,13 +1,10 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <!-- Load Gazebo lib and set the robot namespace -->
+<robot
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/</robotNamespace>
+            <robotNamespace></robotNamespace>
             <robotSimType>steer_bot_hardware_gazebo/SteerBotHardwareGazebo</robotSimType>
         </plugin>
-
-  </gazebo>
-
-
+    </gazebo>
 </robot>
